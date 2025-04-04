@@ -24,7 +24,7 @@ function App() {
           .configureLogging(LogLevel.Information)
           .build();
 
-        newConnection.on("JoinSpecificChatRoom", (userName, msg) => {
+        newConnection.on("ConnectWithAUser", (userName, msg) => {
           console.log("User joined:", userName, "Message:", msg);
         });
 
@@ -36,7 +36,7 @@ function App() {
         await newConnection.start();
         console.log("SignalR connection established");
 
-        await newConnection.invoke("JoinSpecificChatRoom", {
+        await newConnection.invoke("ConnectWithAUser", {
           userName,
           chatRoom,
         });
