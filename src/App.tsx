@@ -67,11 +67,7 @@ function App() {
     <>
       <main>
         <Container>
-          <Row className="px-5 my-5">
-            <Col sm="12">
-              <h1>Welcome to F1 Chat</h1>
-            </Col>
-          </Row>
+          <Row className="px-5 my-5"></Row>
           {!conn ? (
             <WaitingRoom joinChatRoom={joinChatRoom} />
           ) : (
